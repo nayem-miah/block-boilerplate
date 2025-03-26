@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name:       Boilerplate
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Text-Box
+ * Description:       A simple text box block.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Nayem Miah
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       boilerplate
+ * Text Domain:       text-box
  *
- * @package CreateBlock
+ * @package blocks-course
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_boilerplate_block_init() {
+function blocks_course_text_box_block_init() {
 	if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) { // Function introduced in WordPress 6.8.
 		wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
 	} else {
@@ -37,4 +37,4 @@ function create_block_boilerplate_block_init() {
 		}
 	}
 }
-add_action( 'init', 'create_block_boilerplate_block_init' );
+add_action( 'init', 'blocks_course_text_box_block_init' );
