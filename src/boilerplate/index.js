@@ -4,7 +4,6 @@ import './style.scss';
 import metadata from './block.json';
 import Edit from './edit';
 import save from './save';
-const a = 10;
 registerBlockType(metadata.name, {
 	// icon: (
 	// 	<svg
