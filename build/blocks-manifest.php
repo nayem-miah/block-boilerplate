@@ -7,7 +7,7 @@ return array(
 		'name' => 'blocks-course/text-box',
 		'version' => '0.1.0',
 		'title' => 'Text-Box',
-		'category' => 'Text',
+		'category' => 'text',
 		'description' => 'A box of text.',
 		'keywords' => array(
 			'text',
@@ -25,6 +25,11 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'attributes' => array(
+			'text' => array(
+				'type' => 'string'
+			)
+		)
 	)
 );
