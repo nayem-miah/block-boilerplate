@@ -1,24 +1,4 @@
 {
-<<<<<<< HEAD
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "blocks-course/text-box",
-	"version": "0.1.0",
-	"title": "Text-Box",
-	"category": "Text",
-	"description": "A box of text.",
-	"keywords": ["text", "text-box", "paragraph", "content"],
-	"example": {},
-	"supports": {
-		"html": false
-	},
-	"textdomain": "text-box",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
-}
-=======
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "blocks-course/text-box",
@@ -42,4 +22,3 @@
   "style": "file:./style-index.css",
   "viewScript": "file:./view.js"
 }
->>>>>>> cd95148352d50bb2895407faffe944f31557aebe

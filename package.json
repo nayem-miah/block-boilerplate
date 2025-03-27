@@ -5,9 +5,6 @@
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
-	"stylelint": {
-		"extends": "@wordpress/stylelint-config/scss"
-	},
 	"prettier": "@wordpress/prettier-config",
 	"scripts": {
 		"build": "wp-scripts build && wp-scripts build-blocks-manifest",
