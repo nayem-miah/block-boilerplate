@@ -32,6 +32,12 @@ export default function Edit({ attributes, setAttributes }) {
 						icon="editor-alignright"
 						onClick={() => console.log('Align right...')}
 					/>
+
+					<ToolbarButton
+						title="Align Center"
+						icon="editor-aligncenter"
+						onClick={() => console.log('Align Center...')}
+					/>
 				</ToolbarGroup>
 			</BlockControls>
 
