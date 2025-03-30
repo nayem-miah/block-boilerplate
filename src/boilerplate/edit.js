@@ -4,34 +4,57 @@ import {
 	InspectorControls, // InspectotControls is used to display rightsidebar function
 	RichText,
 	useBlockProps,
+	PanelColorSettings
 } from '@wordpress/block-editor';
-import {
-	AnglePickerControl,
-	ColorPalette,
-	ColorPicker,
-	PanelBody,
-	TextControl,
-	TextareaControl,
-	ToggleControl,
-} from '@wordpress/components';
+// import {
+// 	AnglePickerControl,
+// 	ColorPalette,
+// 	ColorPicker,
+// 	PanelBody,
+// 	TextControl,
+// 	TextareaControl,
+// 	ToggleControl,
+// } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { text, alignment } = attributes;
+	const { text, alignment, backgroundColor, textColor } = attributes;
+
 	const onChangeAlignment = (newAlignment) => {
 		setAttributes({ alignment: newAlignment });
 	};
 
+	const handleBackgroundColorChange = (newColor) => {
+		setAttributes({ backgroundColor: newColor });
+	}
+	const handleTextColorChange = (newColor) => {
+		setAttributes({ textColor: newColor });
+	}
+
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody
+				<PanelColorSettings
 					title={__('Color Settings', 'text-box')}
 					icon="admin-appearance"
 					initialOpen={true}
-				>
-					<TextControl
+					colorSettings={[
+						{
+							label: __('Background Color', 'text-box'),
+							value: backgroundColor,
+							onChange: handleBackgroundColorChange,
+						},
+						{
+							label: __('Text Color', 'text-box'),
+							value: textColor,
+							onChange: handleTextColorChange,
+						},
+					]}
+				/>
+					
+
+					{/* <TextControl
 						label="Input Label"
 						value={text}
 						onChange={(value) => console.log(value)}
@@ -54,24 +77,8 @@ export default function Edit({ attributes, setAttributes }) {
 					<ColorPicker
 						color={'F03'}
 						onChange={(v) => console.log(v)}
-					/>
-					<ColorPalette
-						colors={[
-							{
-								name: 'red',
-								color: '#F00',
-							},{
-								name: 'green',
-								color: '#0F0',
-							},
-							{
-								name: 'blue',
-								color: '#00F',
-							}
-						]}
-						onChange={(v)=>console.log(v)}
-					/>
-				</PanelBody>
+					/> */}
+			
 			</InspectorControls>
 
 			<BlockControls>
@@ -126,6 +133,10 @@ export default function Edit({ attributes, setAttributes }) {
 			<RichText
 				{...useBlockProps({
 					className: `text-box-align-${alignment}`,
+					style: {
+						backgroundColor,
+						color: textColor,
+					},
 				})}
 				placeholder={__('Your Text..', 'Text-Box')}
 				tagName="h1"
