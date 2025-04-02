@@ -8,7 +8,7 @@
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-course/text-box","version":"0.1.0","title":"Text-Box","category":"text","description":"A box of text.","keywords":["text","text-box","paragraph","content"],"example":{},"supports":{"html":false},"textdomain":"text-box","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"text":{"type":"string"},"alignment":{"type":"string","default":"left"},"backgroundColor":{"type":"string"},"textColor":{"type":"string"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-course/text-box","version":"0.1.0","title":"Text-Box","category":"text","description":"A box of text.","keywords":["text","text-box","paragraph","content"],"example":{},"supports":{"html":false},"textdomain":"text-box","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"text":{"type":"string"},"alignment":{"type":"string","default":"left"},"backgroundColor":{"type":"string"},"textColor":{"type":"string"},"customBackgroundColor":{"type":"string"},"customTextColor":{"type":"string"}}}');
 
 /***/ }),
 
@@ -20,7 +20,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
@@ -30,41 +30,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
 
-// import {
-// 	AnglePickerControl,
-// 	ColorPalette,
-// 	ColorPicker,
-// 	PanelBody,
-// 	TextControl,
-// 	TextareaControl,
-// 	ToggleControl,
-// } from '@wordpress/components';
 
 
 
-function Edit({
-  attributes,
-  setAttributes
-}) {
+function Edit(props) {
+  const {
+    attributes,
+    setAttributes,
+    backgroundColor,
+    textColor,
+    setBackgroundColor,
+    setTextColor
+  } = props;
+  console.log(attributes);
   const {
     text,
-    alignment,
-    backgroundColor,
-    textColor
+    alignment
   } = attributes;
   const onChangeAlignment = newAlignment => {
     setAttributes({
       alignment: newAlignment
-    });
-  };
-  const handleBackgroundColorChange = newColor => {
-    setAttributes({
-      backgroundColor: newColor
-    });
-  };
-  const handleTextColorChange = newColor => {
-    setAttributes({
-      textColor: newColor
     });
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
@@ -75,12 +60,12 @@ function Edit({
         initialOpen: true,
         colorSettings: [{
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background Color', 'text-box'),
-          value: backgroundColor,
-          onChange: handleBackgroundColorChange
+          value: backgroundColor?.color,
+          onChange: setBackgroundColor
         }, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Text Color', 'text-box'),
-          value: textColor,
-          onChange: handleTextColorChange
+          value: textColor?.color,
+          onChange: setTextColor
         }]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.BlockControls, {
@@ -92,8 +77,8 @@ function Edit({
       ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
         className: `text-box-align-${alignment}`,
         style: {
-          backgroundColor,
-          color: textColor
+          backgroundColor: backgroundColor?.color,
+          color: textColor?.color
         }
       }),
       placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Your Text..', 'Text-Box'),
@@ -105,6 +90,10 @@ function Edit({
     })]
   });
 }
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.withColors)({
+  backgroundColor: 'backgroundColor',
+  textColor: 'color'
+})(Edit));
 
 /***/ }),
 
@@ -174,28 +163,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
-// import { RichText, useBlockProps } from '@wordpress/block-editor';
-
-// export default function save({ attributes }) {
-// 	const { text, alignment, backgroundColor, textColor } = attributes;
-
-// 	console.log('.......................',textColor);
-
-// 	return (
-// 		<RichText.Content
-// 			{...useBlockProps.save({
-// 				className: `text-box-align-${alignment}`,
-// 				style: {
-// 					backgroundColor,
-// 					color: textColor,
-// 				},
-// 			})}
-// 			tagName="h1"
-// 			value={(text, textColor)}
-// 		/>
-// 	);
-// }
-
 
 
 function save({
@@ -216,7 +183,7 @@ function save({
       }
     }),
     tagName: "h1",
-    value: text // ✅ Pass only `text` here
+    value: text
   });
 }
 

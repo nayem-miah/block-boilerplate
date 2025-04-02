@@ -1,36 +1,32 @@
 import {
 	AlignmentToolbar,
 	BlockControls, // BlockControls is used to display block function above the block
-	InspectorControls, // InspectotControls is used to display rightsidebar function
+	InspectorControls,
+	PanelColorSettings, // InspectotControls is used to display rightsidebar function
 	RichText,
 	useBlockProps,
-	PanelColorSettings
+	withColors,
 } from '@wordpress/block-editor';
-// import {
-// 	AnglePickerControl,
-// 	ColorPalette,
-// 	ColorPicker,
-// 	PanelBody,
-// 	TextControl,
-// 	TextareaControl,
-// 	ToggleControl,
-// } from '@wordpress/components';
+
 import { __ } from '@wordpress/i18n';
 import './editor.scss';
 
-export default function Edit({ attributes, setAttributes }) {
-	const { text, alignment, backgroundColor, textColor } = attributes;
+function Edit(props) {
+	const {
+		attributes,
+		setAttributes,
+		backgroundColor,
+		textColor,
+		setBackgroundColor,
+		setTextColor,
+	} = props;
+
+	console.log(attributes);
+	const { text, alignment } = attributes;
 
 	const onChangeAlignment = (newAlignment) => {
 		setAttributes({ alignment: newAlignment });
 	};
-
-	const handleBackgroundColorChange = (newColor) => {
-		setAttributes({ backgroundColor: newColor });
-	}
-	const handleTextColorChange = (newColor) => {
-		setAttributes({ textColor: newColor });
-	}
 
 	return (
 		<>
@@ -42,43 +38,16 @@ export default function Edit({ attributes, setAttributes }) {
 					colorSettings={[
 						{
 							label: __('Background Color', 'text-box'),
-							value: backgroundColor,
-							onChange: handleBackgroundColorChange,
+							value: backgroundColor?.color,
+							onChange: setBackgroundColor,
 						},
 						{
 							label: __('Text Color', 'text-box'),
-							value: textColor,
-							onChange: handleTextColorChange,
+							value: textColor?.color,
+							onChange: setTextColor,
 						},
 					]}
 				/>
-					
-
-					{/* <TextControl
-						label="Input Label"
-						value={text}
-						onChange={(value) => console.log(value)}
-						help="This is a help text"
-					/>
-
-					<TextareaControl
-						label="Text Area Label"
-						value={text}
-						onChange={(value) => console.log(value)}
-						help="This is a help text"
-					/>
-
-					<ToggleControl
-						label="Toggle Label"
-						checked={true}
-						onChange={(value) => console.log(value)}
-					/>
-					<AnglePickerControl />
-					<ColorPicker
-						color={'F03'}
-						onChange={(v) => console.log(v)}
-					/> */}
-			
 			</InspectorControls>
 
 			<BlockControls>
@@ -88,54 +57,12 @@ export default function Edit({ attributes, setAttributes }) {
 				/>
 			</BlockControls>
 
-			{/* <BlockControls>
-				{text && (
-					<ToolbarGroup>
-						<ToolbarButton
-							title="Align Left"
-							icon="editor-alignleft"
-							onClick={() => console.log('Align Left...')}
-						/>
-
-						<ToolbarButton
-							title="Align Right"
-							icon="editor-alignright"
-							onClick={() => console.log('Align right...')}
-						/>
-
-						<ToolbarButton
-							title="Align Center"
-							icon="editor-aligncenter"
-							onClick={() => console.log('Align Center...')}
-						/>
-						<DropdownMenu
-							icon="arrow-down-alt2"
-							label={__('More Alignments', 'text-box')}
-							controls={[
-								{
-									title: __('Wide', 'text-box'),
-									icon: 'align-wide',
-									isActive: true,
-									onClick: () => console.log('Align Left...'),
-								},
-								{
-									title: __('Full', 'text-box'),
-									icon: 'align-full-width',
-									onClick: () =>
-										console.log('Align right...'),
-								},
-							]}
-						/>
-					</ToolbarGroup>
-				)}
-			</BlockControls> */}
-
 			<RichText
 				{...useBlockProps({
 					className: `text-box-align-${alignment}`,
 					style: {
-						backgroundColor,
-						color: textColor,
+						backgroundColor: backgroundColor?.color,
+						color: textColor?.color,
 					},
 				})}
 				placeholder={__('Your Text..', 'Text-Box')}
@@ -146,3 +73,8 @@ export default function Edit({ attributes, setAttributes }) {
 		</>
 	);
 }
+
+export default withColors({
+	backgroundColor: 'backgroundColor',
+	textColor: 'color',
+})(Edit);
