@@ -14,7 +14,12 @@
   ],
   "example": {},
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true,
+      "gradients": true
+    }
   },
   "textdomain": "text-box",
   "editorScript": "file:./index.js",
@@ -33,12 +38,6 @@
       "type": "string"
     },
     "textColor": {
-      "type": "string"
-    },
-    "customBackgroundColor": {
-      "type": "string"
-    },
-    "customTextColor": {
       "type": "string"
     }
   }
