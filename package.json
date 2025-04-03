@@ -24,6 +24,7 @@
 		"eslint-plugin-prettier": "^5.2.5"
 	},
 	"dependencies": {
-		"@wordpress/components": "^29.6.0"
+		"@wordpress/components": "^29.6.0",
+		"classnames": "^2.5.1"
 	}
 }

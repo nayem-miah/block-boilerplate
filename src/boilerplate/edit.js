@@ -21,7 +21,6 @@ function Edit(props) {
 		setTextColor,
 	} = props;
 
-	console.log(attributes);
 	const { text, alignment } = attributes;
 
 	const onChangeAlignment = (newAlignment) => {
