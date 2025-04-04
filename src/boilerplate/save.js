@@ -5,7 +5,7 @@ export default function save({ attributes }) {
 	const { text, alignment } = attributes;
 
 	const classes = classnames(`text-box-align-${alignment}`);
-
+	const a = 20;
 	return (
 		<RichText.Content
 			{...useBlockProps.save({
