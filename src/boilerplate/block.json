@@ -14,6 +14,9 @@
 			"background": true,
 			"text": true,
 			"gradients": true
+		},
+		"spacing": {
+			"padding":true
 		}
 	},
 	"textdomain": "text-box",
@@ -34,6 +37,31 @@
 		},
 		"textColor": {
 			"type": "string"
-		}
+		},
+		"shadow":{
+			"type":"boolean",
+			"default": false
+		},
+		"shadowOpacity":{
+			"type":"number",
+			"default": 30
+		},
+			"style": {
+				"type": "object",
+				"default": {
+					"color": {
+						"background": "#6E7787"
+						
+					},
+					"spacing": {
+						"padding": {
+							"top": "50px",
+							"right": "50px",
+							"bottom": "50px",
+							"left": "50px"
+						}
+					}
+				}
+			}
 	}
 }

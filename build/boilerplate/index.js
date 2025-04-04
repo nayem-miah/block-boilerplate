@@ -94,7 +94,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-course/text-box","version":"0.1.0","title":"Text-Box","category":"text","description":"A box of text.","keywords":["text","text-box","paragraph","content"],"example":{},"supports":{"html":false,"color":{"background":true,"text":true,"gradients":true}},"textdomain":"text-box","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"text":{"type":"string"},"alignment":{"type":"string","default":"left"},"backgroundColor":{"type":"string"},"textColor":{"type":"string"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-course/text-box","version":"0.1.0","title":"Text-Box","category":"text","description":"A box of text.","keywords":["text","text-box","paragraph","content"],"example":{},"supports":{"html":false,"color":{"background":true,"text":true,"gradients":true},"spacing":{"padding":true}},"textdomain":"text-box","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"text":{"type":"string"},"alignment":{"type":"string","default":"left"},"backgroundColor":{"type":"string"},"textColor":{"type":"string"},"shadow":{"type":"boolean","default":false},"shadowOpacity":{"type":"number","default":30},"style":{"type":"object","default":{"color":{"background":"#6E7787"},"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}}}}');
 
 /***/ }),
 
@@ -102,70 +102,9 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /*!*********************************!*\
   !*** ./src/boilerplate/edit.js ***!
   \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Edit)
-/* harmony export */ });
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/boilerplate/editor.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-function Edit(props) {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    text,
-    alignment
-  } = attributes;
-  const onChangeAlignment = newAlignment => {
-    setAttributes({
-      alignment: newAlignment
-    });
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.BlockControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.AlignmentToolbar, {
-        value: alignment,
-        onChange: onChangeAlignment
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
-      ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
-        className: `text-box-align-${alignment}`
-      }),
-      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Your Text..', 'Text-Box'),
-      tagName: "h1",
-      onChange: texts => setAttributes({
-        text: texts
-      }),
-      value: text
-    })]
-  });
-}
-
-/***/ }),
-
-/***/ "./src/boilerplate/editor.scss":
-/*!*************************************!*\
-  !*** ./src/boilerplate/editor.scss ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\src\\boilerplate\\edit.js: Missing semicolon. (36:3)\n\n\u001b[0m \u001b[90m 34 |\u001b[39m \t\t[\u001b[32m`shadow-opacity-${shadowOpacity}`\u001b[39m]\u001b[33m:\u001b[39m shadow \u001b[33m&&\u001b[39m shadowOpacity\u001b[33m,\u001b[39m\n \u001b[90m 35 |\u001b[39m \t})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m git branch \u001b[33m-\u001b[39mm old\u001b[33m-\u001b[39mbranch\u001b[33m-\u001b[39mname \u001b[36mnew\u001b[39m\u001b[33m-\u001b[39mbranch\u001b[33m-\u001b[39mname\n \u001b[90m    |\u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m \t\u001b[36mreturn\u001b[39m (\n \u001b[90m 38 |\u001b[39m \t\t\u001b[33m<\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 39 |\u001b[39m \t\t\t{shadow \u001b[33m&&\u001b[39m (\u001b[0m\n    at constructor (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:360:19)\n    at JSXParserMixin.raise (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:3327:19)\n    at JSXParserMixin.semicolon (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:3653:10)\n    at JSXParserMixin.parseExpressionStatement (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12924:10)\n    at JSXParserMixin.parseStatementContent (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12538:19)\n    at JSXParserMixin.parseStatementLike (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12407:17)\n    at JSXParserMixin.parseStatementListItem (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12387:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12955:61)\n    at JSXParserMixin.parseBlockBody (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12948:10)\n    at JSXParserMixin.parseBlock (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12936:10)\n    at JSXParserMixin.parseFunctionBody (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:11784:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:11770:10)\n    at F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:13080:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12078:14)\n    at JSXParserMixin.parseFunction (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:13079:10)\n    at JSXParserMixin.parseExportDefaultExpression (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:13541:19)\n    at JSXParserMixin.parseExport (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:13462:25)\n    at JSXParserMixin.parseStatementContent (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12517:27)\n    at JSXParserMixin.parseStatementLike (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12407:17)\n    at JSXParserMixin.parseModuleItem (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12384:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12955:36)\n    at JSXParserMixin.parseBlockBody (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12948:10)\n    at JSXParserMixin.parseProgram (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12281:10)\n    at JSXParserMixin.parseTopLevel (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:12271:25)\n    at JSXParserMixin.parse (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:14123:10)\n    at parse (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\parser\\lib\\index.js:14157:38)\n    at parser (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\core\\lib\\parser\\index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:64:37)\n    at normalizeFile.next (<anonymous>)\n    at run (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\core\\lib\\transformation\\index.js:21:50)\n    at run.next (<anonymous>)\n    at transform (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\@babel\\core\\lib\\transform.js:22:33)\n    at transform.next (<anonymous>)\n    at step (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\gensync\\index.js:261:32)\n    at F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\gensync\\index.js:273:13\n    at async.call.result.err.err (F:\\xampp\\htdocs\\nayem-gutenberg\\wp-content\\plugins\\block-boilerplate\\node_modules\\gensync\\index.js:223:11)");
 
 /***/ }),
 
@@ -235,10 +174,14 @@ function save({
 }) {
   const {
     text,
-    alignment
+    alignment,
+    shadow,
+    shadowOpacity
   } = attributes;
-  const classes = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`text-box-align-${alignment}`);
-  const a = 20;
+  const classes = classnames__WEBPACK_IMPORTED_MODULE_1___default()(`text-box-align-${alignment}`, {
+    'has-shadow': shadow,
+    [`shadow-opacity-${shadowOpacity}`]: shadow && shadowOpacity
+  });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
       className: classes
@@ -282,17 +225,6 @@ module.exports = window["wp"]["blockEditor"];
 
 "use strict";
 module.exports = window["wp"]["blocks"];
-
-/***/ }),
-
-/***/ "@wordpress/i18n":
-/*!******************************!*\
-  !*** external ["wp","i18n"] ***!
-  \******************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
