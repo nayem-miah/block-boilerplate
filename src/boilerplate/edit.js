@@ -33,7 +33,6 @@ export default function Edit(props) {
 		'has-shadow': shadow,
 		[`shadow-opacity-${shadowOpacity}`]: shadow && shadowOpacity,
 	});
-git branch -m 34-change-color-block-support 34/35-change-color-block-support-and-shadowOpacity
 	return (
 		<>
 			{shadow && (

@@ -6,7 +6,12 @@
 	"title": "Text-Box",
 	"category": "text",
 	"description": "A box of text.",
-	"keywords": ["text", "text-box", "paragraph", "content"],
+	"keywords": [
+		"text",
+		"text-box",
+		"paragraph",
+		"content"
+	],
 	"example": {},
 	"supports": {
 		"html": false,
@@ -16,9 +21,20 @@
 			"gradients": true
 		},
 		"spacing": {
-			"padding":true
+			"padding": true
 		}
 	},
+	"styles": [
+		{
+			"name": "Squared",
+			"label": "Squared",
+			"isDefault": true
+		},
+		{
+			"name": "rounded",
+			"label": "rounded"
+		}
+	],
 	"textdomain": "text-box",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
@@ -26,7 +42,8 @@
 	"viewScript": "file:./view.js",
 	"attributes": {
 		"text": {
-			"type": "string"
+			"type": "string",
+			"default":"Some text"
 		},
 		"alignment": {
 			"type": "string",
@@ -38,30 +55,29 @@
 		"textColor": {
 			"type": "string"
 		},
-		"shadow":{
-			"type":"boolean",
+		"shadow": {
+			"type": "boolean",
 			"default": false
 		},
-		"shadowOpacity":{
-			"type":"number",
+		"shadowOpacity": {
+			"type": "number",
 			"default": 30
 		},
-			"style": {
-				"type": "object",
-				"default": {
-					"color": {
-						"background": "#6E7787"
-						
-					},
-					"spacing": {
-						"padding": {
-							"top": "50px",
-							"right": "50px",
-							"bottom": "50px",
-							"left": "50px"
-						}
+		"style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"background": "#6E7787"
+				},
+				"spacing": {
+					"padding": {
+						"top": "50px",
+						"right": "50px",
+						"bottom": "50px",
+						"left": "50px"
 					}
 				}
 			}
+		}
 	}
 }

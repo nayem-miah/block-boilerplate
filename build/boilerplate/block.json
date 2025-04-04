@@ -24,6 +24,17 @@
       "padding": true
     }
   },
+  "styles": [
+    {
+      "name": "Squared",
+      "label": "Squared",
+      "isDefault": true
+    },
+    {
+      "name": "rounded",
+      "label": "rounded"
+    }
+  ],
   "textdomain": "text-box",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
@@ -31,7 +42,8 @@
   "viewScript": "file:./view.js",
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "string",
+      "default": "Some text"
     },
     "alignment": {
       "type": "string",
